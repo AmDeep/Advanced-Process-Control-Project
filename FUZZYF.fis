@@ -1,0 +1,94 @@
+[System]
+Name='FUZZYF'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=30
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='COD'
+Range=[200 800]
+NumMFs=5
+MF1='Very_Low_COD':'trimf',[50 200 350]
+MF2='Low_COD':'trimf',[198.412698412698 348.412698412698 498.412698412698]
+MF3='Mild_COD':'trimf',[350 500 650]
+MF4='High_COD':'trimf',[500 650 800]
+MF5='Very_High_COD':'trimf',[650 800 950]
+
+[Input2]
+Name='HP_Concentration'
+Range=[2.2 15.4]
+NumMFs=5
+MF1='Very_Low_HP':'trimf',[-1.1 2.2 5.5]
+MF2='Low_HP':'trimf',[2.2 5.5 8.8]
+MF3='Mild_HP':'trimf',[5.5 8.8 12.1]
+MF4='High_HP':'trimf',[8.8 12.1 15.4]
+MF5='Very_High_HP':'trimf',[12.1 15.4 18.7]
+
+[Input3]
+Name='pH'
+Range=[1.5 10.5]
+NumMFs=5
+MF1='Strong_Acid':'trimf',[-0.75 1.5 3.75]
+MF2='Mild_Acid':'trimf',[1.47619047619048 3.72619047619048 5.97619047619048]
+MF3='Neutral':'trimf',[3.77380952380952 6.02380952380952 8.27380952380952]
+MF4='Mild_Base':'trimf',[6 8.25 10.5]
+MF5='Strong_Base':'trimf',[8.25 10.5 12.75]
+
+[Input4]
+Name='Reaction_Time'
+Range=[45 135]
+NumMFs=5
+MF1='Very_Fast':'trimf',[22.5 45 67.5]
+MF2='Fast':'trimf',[45 67.5 90]
+MF3='Normal':'trimf',[67.5 90 112.5]
+MF4='Slow':'trimf',[90 112.5 135]
+MF5='Very_Low':'trimf',[112.5 135 157.5]
+
+[Output1]
+Name='output1'
+Range=[33.2 98]
+NumMFs=5
+MF1='Very_Low_Response':'trimf',[17 33.2 49.4]
+MF2='Low_Response':'trimf',[33.2 49.4 65.6]
+MF3='Normal_Response':'trimf',[49.4 65.6 81.8]
+MF4='High_Response':'trimf',[65.6 81.8 98]
+MF5='Very_High_Response':'trimf',[81.6285714285714 97.8285714285715 114.028571428571]
+
+[Rules]
+3 4 3 4, 4 (1) : 1
+3 4 3 3, 3 (1) : 1
+1 4 3 3, 4 (1) : 1
+3 1 3 3, 2 (1) : 1
+4 5 4 4, 1 (1) : 1
+3 5 3 3, 4 (1) : 1
+3 4 3 3, 3 (1) : 1
+4 2 4 4, 2 (1) : 1
+4 2 1 4, 3 (1) : 1
+4 5 1 4, 4 (1) : 1
+3 4 3 3, 4 (1) : 1
+2 3 3 4, 3 (1) : 1
+2 5 3 3, 2 (1) : 1
+4 5 3 3, 2 (1) : 1
+4 5 1 3, 3 (1) : 1
+3 5 4 5, 3 (1) : 1
+3 3 2 2, 3 (1) : 1
+3 4 3 3, 4 (1) : 1
+3 4 3 3, 5 (1) : 1
+2 3 4 3, 2 (1) : 1
+2 5 2 3, 2 (1) : 1
+4 3 4 3, 1 (1) : 1
+3 4 3 3, 5 (1) : 1
+3 5 2 4, 4 (1) : 1
+3 4 3 5, 5 (1) : 1
+4 3 2 3, 2 (1) : 1
+4 5 2 3, 4 (1) : 1
+2 2 2 5, 5 (1) : 1
+3 4 5 3, 2 (1) : 1
+5 4 3 3, 4 (1) : 1
