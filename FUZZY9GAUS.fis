@@ -1,0 +1,114 @@
+[System]
+Name='FUZZY9GAUS'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=30
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='COD'
+Range=[200 800]
+NumMFs=9
+MF1='VVVL':'gaussmf',[31.85 200]
+MF2='VVL':'gaussmf',[31.85 275]
+MF3='VL':'gaussmf',[31.85 350]
+MF4='L':'gaussmf',[31.85 425]
+MF5='Normal':'gaussmf',[31.85 500]
+MF6='H':'gaussmf',[31.85 575]
+MF7='VH':'gaussmf',[31.85 650]
+MF8='VVH':'gaussmf',[31.85 725]
+MF9='VVVH':'gaussmf',[31.9 801.587301587302]
+
+[Input2]
+Name='HPC'
+Range=[2.2 15.4]
+NumMFs=9
+MF1='VVVL':'gaussmf',[0.7007 2.2]
+MF2='VVL':'gaussmf',[0.7007 3.85]
+MF3='VL':'gaussmf',[0.7007 5.5]
+MF4='L':'gaussmf',[0.7007 7.15]
+MF5='Normal':'gaussmf',[0.7007 8.8]
+MF6='H':'gaussmf',[0.7007 10.45]
+MF7='VH':'gaussmf',[0.7007 12.1]
+MF8='VVH':'gaussmf',[0.7007 13.75]
+MF9='VVVH':'gaussmf',[0.7007 15.4]
+
+[Input3]
+Name='pH'
+Range=[1.5 10.5]
+NumMFs=9
+MF1='VVVA':'gaussmf',[0.4777 1.5]
+MF2='VVA':'gaussmf',[0.4777 2.625]
+MF3='VA':'gaussmf',[0.4777 3.75]
+MF4='A':'gaussmf',[0.4777 4.875]
+MF5='Neutral':'gaussmf',[0.4777 6]
+MF6='B':'gaussmf',[0.4777 7.125]
+MF7='VB':'gaussmf',[0.4777 8.25]
+MF8='VVB':'gaussmf',[0.4777 9.375]
+MF9='VVVB':'gaussmf',[0.4777 10.5]
+
+[Input4]
+Name='Reaction_Time'
+Range=[45 135]
+NumMFs=9
+MF1='VVVS':'gaussmf',[4.777 45]
+MF2='VVS':'gaussmf',[4.777 56.25]
+MF3='VS':'gaussmf',[4.777 67.5]
+MF4='S':'gaussmf',[4.777 78.75]
+MF5='Normal':'gaussmf',[4.777 90]
+MF6='L':'gaussmf',[4.777 101.3]
+MF7='VL':'gaussmf',[4.777 112.5]
+MF8='VVL':'gaussmf',[4.777 123.8]
+MF9='VVVL':'gaussmf',[4.777 135]
+
+[Output1]
+Name='Response'
+Range=[33 98]
+NumMFs=9
+MF1='VVVL':'gaussmf',[3.45 33]
+MF2='VVL':'gaussmf',[3.45 41.13]
+MF3='VL':'gaussmf',[3.45 49.25]
+MF4='L':'gaussmf',[3.45 57.38]
+MF5='Normal':'gaussmf',[3.45 65.5]
+MF6='H':'gaussmf',[3.45 73.63]
+MF7='VH':'gaussmf',[3.45 81.75]
+MF8='VVH':'gaussmf',[3.45 89.88]
+MF9='VVVH':'gaussmf',[3.45 98]
+
+[Rules]
+5 5 5 5, 9 (1) : 1
+5 5 5 1, 7 (1) : 1
+1 5 5 5, 9 (1) : 1
+5 1 5 5, 6 (1) : 1
+5 9 5 5, 8 (1) : 1
+5 5 5 5, 7 (1) : 1
+8 8 8 8, 4 (1) : 1
+8 2 8 8, 2 (1) : 1
+8 2 2 8, 5 (1) : 1
+8 8 2 8, 8 (1) : 1
+5 5 5 5, 8 (1) : 1
+2 2 8 8, 7 (1) : 1
+2 8 8 2, 6 (1) : 1
+8 8 8 2, 3 (1) : 1
+5 5 1 5, 6 (1) : 1
+2 8 8 8, 6 (1) : 1
+2 2 2 2, 7 (1) : 1
+5 5 5 5, 8 (1) : 1
+5 5 5 5, 9 (1) : 1
+2 2 8 2, 5 (1) : 1
+2 8 2 2, 5 (1) : 1
+8 2 8 2, 1 (1) : 1
+5 5 5 5, 8 (1) : 1
+2 8 2 8, 8 (1) : 1
+5 5 5 9, 9 (1) : 1
+8 2 2 2, 4 (1) : 1
+8 8 2 2, 6 (1) : 1
+2 2 2 8, 9 (1) : 1
+5 5 9 5, 4 (1) : 1
+9 5 5 5, 6 (1) : 1
